@@ -392,6 +392,42 @@ img {
   font-size: var(--smaller-font-size);
 }
 
+#twitter,
+#instagram,
+#facebook {
+  font-size: 2em;
+  background-color: #18191f;
+  color: #fff;
+  box-shadow: 2px 2px 2px #00000080, 10px 1px 12px #00000080,
+    2px 2px 10px #00000080, 2px 2px 3px #00000080, inset 2px 2px 10px #00000080,
+    inset 2px 2px 10px #00000080, inset 2px 2px 10px #00000080,
+    inset 2px 2px 10px #00000080;
+  border-radius: 10px;
+  padding: 11px 14px;
+  margin: 0 20px;
+  animation: animate 3s linear infinite;
+  text-shadow: 0 0 50px #0072ff, 0 0 100px #0072ff, 0 0 150px #0072ff,
+    0 0 200px #0072ff;
+}
+#twitter {
+  animation-delay: 0.3s;
+}
+#facebook {
+  animation-delay: 0.7s;
+}
+#intagram {
+  animation-delay: 0.1s;
+}
+
+@keyframes animate {
+  from {
+    filter: hue-rotate(0deg);
+  }
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
+
 /* ===== MEDIA QUERIES=====*/
 @media screen and (max-width: 320px) {
   .home {
@@ -400,8 +436,23 @@ img {
   .home__img {
     width: 200px;
   }
+  #instagram,
+  #twitter,
+  #facebook {
+    font-size: 2em;
+    margin: 0 5px;
+}
+.footer__title {
+  font-size: 1rem;
+  margin-bottom: var(--mb-4);
+}
+.footer__icon {
+  font-size: 0.5rem;
+  color: #fff;
+  margin: 0 var(--mb-2);
 }
 
+ }
 @media screen and (min-width: 576px) {
   .home {
     padding: 4rem 0 2rem;
@@ -442,6 +493,7 @@ img {
   .contact__container {
     justify-items: center;
   }
+ 
 }
 
 @media screen and (min-width: 768px) {
@@ -500,6 +552,8 @@ img {
     column-gap: 2rem;
   }
 }
+
+
 
 @media screen and (min-width: 992px) {
   .bd-grid {
