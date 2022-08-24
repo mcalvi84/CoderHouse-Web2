@@ -1,0 +1,18 @@
+@import 'variables';
+
+header {
+    background-color: $botones;
+    nav {
+        ul {
+            li {
+                list-style-type: none;
+                a {
+                    &hover:hover{
+                        text-decoration: underline;
+
+                    }
+                }
+            }
+        }
+    }
+}
